@@ -40,6 +40,6 @@ Each project will have its own folder, with instructions on how to run it locall
 I’m always open to suggestions and feedback! If you spot a bug or have a cool idea to improve a project, feel free to open an issue or create a pull request.
 
 ## License
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 Thanks for stopping by! Let’s code our way through these 99 days 🚀
