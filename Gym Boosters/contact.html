@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Gym Boosters</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.cdnfonts.com/css/miama" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h3 class="logo">Gym Boosters</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <img src="images/menu.svg" alt="menu icon" class="menu-icon">
+  </nav>
+
+  <header class="contact-header">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Get in touch with us for any questions, feedback, or to join our fitness community.</p>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-form-section">
+      <div class="contact-form-container">
+        <h3>Send Us a Message</h3>
+        <form action="submit_form.php" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="contact-submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-info-section">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Feel free to reach us via email or phone, or visit us at our location.</p>
+        <ul>
+          <li><strong>Phone:</strong> +1 234 567 890</li>
+          <li><strong>Email:</strong> contact@gymboosters.com</li>
+          <li><strong>Address:</strong> 123 Gym Street, Fit City, Workoutland</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Gym Boosters | All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
