@@ -183,3 +183,30 @@ body {
   font-size: 0.8rem;
   line-height: 24px;
 }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .header-title { font-size: 3rem; }
+    .about-title, .contact-title, .services-title { font-size: 2.2rem; }
+  }
+  
+  @media (max-width: 768px) {
+    .header, .about-section, .services-section, .contact-section {
+      max-width: 90%;
+    }
+    .header-title { font-size: 2.5rem; }
+    .service-card { width: 100%; }
+    .contact-form {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title { font-size: 1.8rem; }
+    .btn-header-1, .btn-header-2 {
+      padding: 10px 20px;
+      font-size: 0.8rem;
+    }
+    .navbar ul { flex-direction: column; gap: 10px; }
+    .contact-form input, .contact-form textarea { font-size: 0.9rem; }
+  }
+  
