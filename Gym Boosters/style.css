@@ -4,209 +4,154 @@
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
-  color: #FFFFFF;
+  background-color: #111; /* Dark background */
+  color: #F5F5F5; /* Softer white for text */
 }
 
-.navbar, .header, .about-section, .services-section, .contact-section, .footer-section {
-  max-width: 85%;
-  margin: 0 auto;
-}
-
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  background-color: #1A1A1A;
+  padding: 15px;
 }
+
 .navbar ul {
   display: flex;
-  gap: 47px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 40px;
+  border: 2px solid rgba(255, 215, 0, 0.5); /* Gold accent border */
   border-radius: 39px;
-  padding: 8px 4px;
-  padding-right: 26px;
+  padding: 10px 15px;
 }
+
 .navbar a {
   text-decoration: none;
   font-size: 1rem;
-  color: #FFF;
+  color: #FFD700; /* Gold text */
 }
+
 .logo {
-  color: #E6533C;
+  color: #FF4500; /* Orange-red logo */
   font-style: italic;
   font-size: 2rem;
   font-weight: 800;
 }
 
-/* Responsive Navbar */
-.menu-icon {
-  display: none;
-}
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none;
-  }
-  .menu-icon {
-    display: inline-block;
-    color: #FFF;
-    font-size: 1.5rem;
-  }
+.header, .navbar {
+  max-width: 85%;
+  margin: 30px auto;
 }
 
-/* Hero Section */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 40px 0;
-}
 .header-title {
   font-size: 4rem;
   font-weight: 900;
+  color: #FFD700; /* Gold header text */
 }
+
 .header-description {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 24px;
+  font-size: 1rem;
+  color: rgba(245, 245, 245, 0.8); /* Softer white for subtext */
   margin-top: 20px;
 }
-.btn-header-1, .btn-header-2 {
-  padding: 16px 42px;
-  border-radius: 42px;
-  font-size: 1rem;
-  color: #FFF;
-}
+
 .btn-header-1 {
-  background: rgba(230, 83, 60, 1);
+  padding: 16px 42px;
+  background: #FF4500; /* Vibrant button color */
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 42px;
   border: none;
 }
+
 .btn-header-2 {
-  background: none;
-  border: 1px solid #FFF;
-  margin-left: 10px;
-}
-
-/* About Section */
-.about-section {
-  padding: 60px 0;
-}
-.about-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  text-align: center;
-}
-.about-content {
-  color: rgba(255, 255, 255, 0.5);
+  padding: 16px 42px;
+  color: #FF4500;
   font-size: 1rem;
-  line-height: 1.6;
+  background: none;
+  border-radius: 42px;
+  border: 2px solid #FF4500;
   margin-top: 20px;
+  margin-left: 14px;
 }
 
-/* Services Section */
-.services-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 60px 0;
-}
-.service-card {
-  background: rgba(255, 255, 255, 0.1);
+
+.header-badge1 {
+  padding: 12px 25px;
+  background: rgba(255, 215, 0, 0.15); /* Gold transparent background */
   border-radius: 12px;
-  padding: 20px;
-  width: 48%;
-  text-align: center;
+  border: 1px solid rgba(255, 215, 0, 0.25);
 }
-.service-title {
+
+.header-badge2 {
+  padding: 12px 26px;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFD700;
+}
+
+.section-description {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(245, 245, 245, 0.8);
+  margin-top: 14px;
+}
+
+.trainer img, .team img {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  filter: brightness(0.9);
+}
+
+.trainer-title, .team-title {
+  color: #FF4500;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.service-description {
+
+.trainer-description, .team-description {
+  color: rgba(245, 245, 245, 0.8);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-  margin-top: 10px;
 }
 
-/* Contact Section */
-.contact-section {
-  padding: 60px 0;
-}
-.contact-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  text-align: center;
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 30px auto;
-}
-.contact-form input, .contact-form textarea {
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 8px;
+
+.run-btn, .calc-btn {
+  background-color: #FF4500;
   color: #FFF;
-  font-size: 1rem;
-}
-.contact-form textarea {
-  resize: none;
-  height: 150px;
-}
-.contact-form button {
-  background: rgba(230, 83, 60, 1);
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: #FFF;
+  border-radius: 42px;
+  padding: 16px 52px;
   font-size: 1rem;
   font-weight: 600;
 }
 
-/* Footer */
 .footer {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px 0;
-  text-align: center;
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 40px;
 }
-.footer-content {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-  line-height: 24px;
+
+.footer-content-logo {
+  font-size: 2rem;
+  color: #FF4500;
+  font-style: italic;
+  font-weight: 800;
 }
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .header-title { font-size: 3rem; }
-    .about-title, .contact-title, .services-title { font-size: 2.2rem; }
-  }
-  
-  @media (max-width: 768px) {
-    .header, .about-section, .services-section, .contact-section {
-      max-width: 90%;
-    }
-    .header-title { font-size: 2.5rem; }
-    .service-card { width: 100%; }
-    .contact-form {
-      max-width: 90%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .header-title { font-size: 1.8rem; }
-    .btn-header-1, .btn-header-2 {
-      padding: 10px 20px;
-      font-size: 0.8rem;
-    }
-    .navbar ul { flex-direction: column; gap: 10px; }
-    .contact-form input, .contact-form textarea { font-size: 0.9rem; }
-  }
-  
+
+.footer-list a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-list a:hover {
+  color: #FF4500;
+}
