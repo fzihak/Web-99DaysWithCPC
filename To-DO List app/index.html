@@ -1,47 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List App - Home</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
 </head>
+
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Boost Your Productivity</h1>
-            <p>Organize tasks, track progress, and stay on top of your goals with our To-Do List App!</p>
-            <button onclick="googleLogin()" class="btn-login">Login with Google</button>
+    <header>
+        <div class="container">
+            <h1>Welcome to the To-Do List App</h1>
+            <p>Your personal assistant for managing tasks efficiently!</p>
         </div>
     </header>
 
-    <section class="importance">
-        <h2>Why Use a To-Do List?</h2>
-        <div class="importance-content">
-            <div class="importance-item">
-                <h3>Stay Focused</h3>
-                <p>Maintain a clear overview of your tasks, helping you focus on what truly matters.</p>
-            </div>
-            <div class="importance-item">
-                <h3>Be Organized</h3>
-                <p>Sort and prioritize tasks for effective time management and productivity.</p>
-            </div>
-            <div class="importance-item">
-                <h3>Achieve Goals</h3>
-                <p>Complete tasks with a structured approach to reach personal and professional goals.</p>
+    <section id="hero">
+        <div class="container">
+            <h2>Organize your day, accomplish your goals.</h2>
+            <p>Track tasks, set reminders, and get things done!</p>
+            <button id="loginButton">Login with Google</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Why Use a To-Do List?</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="https://www.example.com/to-do-icon1.png" alt="Task Organization">
+                    <p>Stay organized and keep track of tasks</p>
+                </div>
+                <div class="flex-item">
+                    <img src="https://www.example.com/to-do-icon2.png" alt="Task Completion">
+                    <p>Complete tasks efficiently and get rewards!</p>
+                </div>
+                <div class="flex-item">
+                    <img src="https://www.example.com/to-do-icon3.png" alt="Reminder">
+                    <p>Set reminders and never miss a deadline</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="how-to-use">
-        <h2>How to Use the App</h2>
-        <p>Simply log in with Google, add tasks, track progress, and enjoy a well-organized day!</p>
-        <p>With our app, planning your day has never been easier.</p>
-    </section>
-
     <footer>
-        <p>&copy; 2024 <a href="https://zihak.me">Foysal zihak</a></p>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://zihak.me">Foysal Zihak</a> All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+
+    <!-- Firebase Configuration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBGLnh2Cefv7IjPRbLpl0T63KZ5aSYRKdc",
+            authDomain: "to-do-app-27a49.firebaseapp.com",
+            databaseURL: "https://to-do-app-27a49-default-rtdb.firebaseio.com",
+            projectId: "to-do-app-27a49",
+            storageBucket: "to-do-app-27a49.firebasestorage.app",
+            messagingSenderId: "165878527522",
+            appId: "1:165878527522:web:5437760902848cfe72fc7b",
+            measurementId: "G-T0QGDRBBRL"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const provider = new GoogleAuthProvider();
+
+        const loginButton = document.getElementById("loginButton");
+
+        function login() {
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    const user = result.user;
+                    window.location.href = "todo.html"; 
+                }).catch((error) => {
+                    console.error(error);
+                });
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                window.location.href = "todo.html";
+            }
+        });
+
+        loginButton.addEventListener('click', login);
+    </script>
 </body>
+
 </html>
