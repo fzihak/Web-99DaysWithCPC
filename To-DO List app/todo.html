@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Your To-Do List</h1>
+            <button id="logoutButton">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Your Tasks</h2>
+            <div id="taskContainer">
+                <!-- To-Do tasks will be dynamically added here -->
+            </div>
+
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Enter your task">
+                <button type="submit">Add Task</button>
+            </form>
+
+            <h3>Task History</h3>
+            <div id="historyContainer">
+                <!-- Task history will be dynamically shown here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://zihak.me">Foysal Zihak</a> All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"></script>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="todo.js"></script>
+
+</body>
+
+</html>
