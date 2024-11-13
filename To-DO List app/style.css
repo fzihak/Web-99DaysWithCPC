@@ -1,156 +1,155 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1d1f27;
-    color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 header {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background-color: #282c34;
-    color: #00d4ff;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #e94560;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #a1a1a1;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: #16213e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 button {
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    background-color: #00d4ff;
-    transition: all 0.3s ease;
+  background: #0f3460;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 button:hover {
-    background-color: #0099cc;
+  background: #e94560;
 }
 
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888;
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 1rem;
 }
 
-button {
-    position: relative;
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #00d4ff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.4s;
-    overflow: hidden;
-    z-index: 1;
+.todo-list {
+  list-style: none;
+  margin-top: 20px;
 }
 
-button:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #00d4ff;
-    z-index: -1;
-    transition: transform 0.4s ease;
-    transform: scaleX(0);
-    transform-origin: left;
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f3460;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-button:hover:before {
-    transform: scaleX(1);
+.todo-item:hover {
+  background: #e94560;
 }
 
-.task-section, .task-features, .task-list {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #a1a1a1;
 }
 
-
-.task-features {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
+.actions {
+  display: flex;
+  gap: 10px;
 }
 
-.feature {
-    background-color: #333;
-    padding: 15px;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+.actions button {
+  padding: 8px;
+  font-size: 0.9rem;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: #00d4ff;
-    margin-bottom: 10px;
+.neon-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-#drawingCanvas {
-    background-color: #fff;
-    width: 100%;
-    height: 300px;
-    border-radius: 8px;
-    border: 2px solid #00d4ff;
+.neon-button::before,
+.neon-button::after {
+  content: '';
+  position: absolute;
+  transition: 0.3s;
 }
 
-@media (min-width: 768px) {
-    .task-features {
-        grid-template-columns: 1fr 1fr;
-    }
+.neon-button::before {
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e94560;
 }
 
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 3rem;
-    }
-
-    button {
-        font-size: 1.1rem;
-    }
-
-    .task-features {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.neon-button::after {
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0f3460;
 }
 
+.neon-button:hover::before {
+  top: 0;
+}
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
+.neon-button:hover::after {
+  bottom: 0;
+}
 
-    .task-section, .task-features, .task-list {
-        padding: 15px;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #a1a1a1;
+  font-size: 0.9rem;
 }
