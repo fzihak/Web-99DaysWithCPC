@@ -748,3 +748,225 @@
   position: relative;
   overflow: hidden;
 }
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-item:hover::before {
+  opacity: 1;
+}
+
+.service-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+.service-icon {
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.service-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.service-description {
+  color: var(--text-color);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.service-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.3s ease;
+}
+
+.service-cta:hover::before {
+  left: 100%;
+}
+
+.service-cta:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-item {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.service-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Skills Section */
+
+.skills {
+  background-color: var(--secondary-color);
+  padding: 80px 0;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+.skill-icon {
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  color: var(--text-color);
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-item {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Projects Section */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.projects-title {
+  color: var(--primary-color);
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.project-item {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.project-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
