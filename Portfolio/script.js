@@ -64,3 +64,53 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       retina_detect: true
     });
+    const goToTop = document.querySelector('.go-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        goToTop.classList.add('active');
+      } else {
+        goToTop.classList.remove('active');
+      }
+    });
+  
+    goToTop.addEventListener('click',
+      () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        playSound('scrollTopSound');
+      });
+  
+    goToTop.addEventListener('mousemove',
+      (e) => {
+        const rect = goToTop.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+  
+        goToTop.style.setProperty('--mouse-x', `${x}px`);
+        goToTop.style.setProperty('--mouse-y', `${y}px`);
+      });
+  
+    const scrollProgress = document.querySelector('.scroll-progress');
+  
+    function updateScrollProgress() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = scrollPercentage + '%';
+    }
+  
+    window.addEventListener('scroll',
+      updateScrollProgress);
+    let isScrolling;
+    window.addEventListener('scroll',
+      () => {
+        clearTimeout(isScrolling);
+        document.body.classList.add('is-scrolling');
+  
+        isScrolling = setTimeout(() => {
+          document.body.classList.remove('is-scrolling');
+        }, 300);
+      });
