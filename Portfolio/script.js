@@ -114,3 +114,88 @@ document.addEventListener('DOMContentLoaded', () => {
           document.body.classList.remove('is-scrolling');
         }, 300);
       });
+
+    
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  let isMenuOpen = false;
+
+  hamburger.addEventListener('click',
+    () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      isMenuOpen = !isMenuOpen;
+      playSound(isMenuOpen ? 'menuOpenSound': 'menuCloseSound');
+    });
+
+  document.querySelectorAll('.nav-links li').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  }));
+
+  const navItems = document.querySelectorAll('.nav-links li a');
+  navItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+      item.style.setProperty('--random-x', `${Math.random() * 100}%`);
+      item.style.setProperty('--random-y', `${Math.random() * 100}%`);
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  const downloadBtn = document.querySelector('.btn-download');
+  downloadBtn.addEventListener('mousemove',
+    (e) => {
+      const rect = downloadBtn.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      downloadBtn.style.setProperty('--mouse-x', `${x}px`);
+      downloadBtn.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+  const aboutImage = document.querySelector('.about-image');
+  window.addEventListener('mousemove',
+    (e) => {
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+      aboutImage.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+    });
+
+  const serviceItems = document.querySelectorAll('.service-item');
+  serviceItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+    });
+  });
+
+  const skillItems = document.querySelectorAll('.skill-item');
+  skillItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+    });
+  });
+
+  const projectItems = document.querySelectorAll('.project-item');
+  const animateProjects = () => {
+    projectItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, index * 200);
+    });
+  };
