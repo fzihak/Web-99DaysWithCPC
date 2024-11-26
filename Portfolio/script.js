@@ -199,3 +199,122 @@ document.addEventListener('DOMContentLoaded', () => {
       }, index * 200);
     });
   };
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  testimonialCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  const blogCards = document.querySelectorAll('.blog-card');
+  blogCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.id === 'skills') {
+          animateSkills();
+        } else if (entry.target.id === 'projects') {
+          animateProjects();
+        }
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(document.querySelector('#skills'));
+  observer.observe(document.querySelector('#projects'));
+
+  const contactForm = document.querySelector('.contact-form-container');
+  const submitBtn = document.querySelector('.submit-btn');
+
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitBtn.classList.add('submitted');
+    submitBtn.innerHTML = '<span class="btn-text">Message Sent!</span><span class="btn-icon"><i class="fas fa-check"></i></span>';
+    setTimeout(() => {
+      submitBtn.classList.remove('submitted');
+      submitBtn.innerHTML = '<span class="btn-text">Send Message</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span>';
+    },
+      3000);
+  });
+  function playSound(audioId) {
+    const audio = document.getElementById(audioId);
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  function playSoundWithVolume(audioId, volume) {
+    const audio = document.getElementById(audioId);
+    audio.volume = volume;
+    audio.currentTime = 0;
+    audio.play();
+  }
+  document.querySelectorAll('.clickable').forEach(element => {
+    element.addEventListener('click',
+      () => playSound('clickSound'));
+  });
+
+  document.querySelectorAll('.clickable').forEach(element => {
+    element.addEventListener('mouseenter',
+      () => playSoundWithVolume('hoverSound', 0.5));
+  });
+
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      header.style.backgroundColor = 'rgba(2, 12, 27, 0.9)';
+    } else {
+      header.style.backgroundColor = 'rgba(2, 12, 27, 0.8)';
+    }
+  });
+
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor');
+  document.body.appendChild(cursor);
+
+  const cursorinner = document.createElement('div');
+  cursorinner.classList.add('cursor2');
+  document.body.appendChild(cursorinner);
+
+  document.addEventListener('mousemove',
+    function(e) {
+      cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+    });
+
+  document.addEventListener('mousemove',
+    function(e) {
+      let x = e.clientX;
+      let y = e.clientY;
+      cursorinner.style.left = x + 'px';
+      cursorinner.style.top = y + 'px';
+    });
+
+  document.addEventListener('mousedown',
+    function() {
+      cursor.classList.add('click');
+      cursorinner.classList.add('cursorinnerhover');
+    });
+
+  document.addEventListener('mouseup',
+    function() {
+      cursor.classList.remove('click');
+      cursorinner.classList.remove('cursorinnerhover');
+    });
+});
