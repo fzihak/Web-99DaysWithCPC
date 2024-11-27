@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkEdit - In-browser Markdown editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-pen-fancy"></i>
+                <span>MarkEdit</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn" onclick="toggleDarkMode()">
+                    <i class="fas fa-moon"></i>
+                    <span>Theme</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <button class="btn" onclick="formatText('heading')">
+                <i class="fas fa-heading"></i>
+            </button>
+            <button class="btn" onclick="formatText('bold')">
+                <i class="fas fa-bold"></i>
+            </button>
+            <button class="btn" onclick="formatText('italic')">
+                <i class="fas fa-italic"></i>
+            </button>
+            <button class="btn" onclick="formatText('strikethrough')">
+                <i class="fas fa-strikethrough"></i>
+            </button>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn" onclick="formatText('link')">
+                <i class="fas fa-link"></i>
+            </button>
+            <button class="btn" onclick="formatText('image')">
+                <i class="fas fa-image"></i>
+            </button>
+            <button class="btn" onclick="formatText('code')">
+                <i class="fas fa-code"></i>
+            </button>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn" onclick="formatText('bullet-list')">
+                <i class="fas fa-list-ul"></i>
+            </button>
+            <button class="btn" onclick="formatText('number-list')">
+                <i class="fas fa-list-ol"></i>
+            </button>
+            <button class="btn" onclick="formatText('task-list')">
+                <i class="fas fa-tasks"></i>
+            </button>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn" onclick="formatText('quote')">
+                <i class="fas fa-quote-right"></i>
+            </button>
+            <button class="btn" onclick="formatText('table')">
+                <i class="fas fa-table"></i>
+            </button>
+            <button class="btn" onclick="formatText('horizontal-rule')">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
