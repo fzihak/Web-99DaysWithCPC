@@ -75,4 +75,230 @@
                 <i class="fas fa-minus"></i>
             </button>
         </div>
-        
+        <div class="toolbar-group">
+            <div class="dropdown">
+    <button class="btn" onclick="toggleDropdown('skills-dropdown')">
+        <i class="fas fa-code"></i>
+        <span>Skills</span>
+    </button>
+    <div id="skills-dropdown" class="dropdown-content">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search skills..." onkeyup="filterDropdownItems('skills-dropdown')">
+        </div>
+        <div class="dropdown-section">Programming Languages</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('python')">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('javascript')">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('typescript')">
+            <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('java')">
+            <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white" alt="Java">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('csharp')">
+            <img src="https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white" alt="C#">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('cpp')">
+            <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white" alt="C++">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('c')">
+            <img src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white" alt="C">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('php')">
+            <img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" alt="PHP">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('ruby')">
+            <img src="https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white" alt="Ruby">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('swift')">
+            <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white" alt="Swift">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('kotlin')">
+            <img src="https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white" alt="Kotlin">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('go')">
+            <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('rust')">
+            <img src="https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white" alt="Rust">
+        </div>
+
+        <div class="dropdown-section">Frontend Development</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('html')">
+            <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('css')">
+            <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('react')">
+            <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
+            </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('vue')">
+            <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white" alt="Vue.js">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('angular')">
+            <img src="https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white" alt="Angular">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('svelte')">
+            <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat&logo=svelte&logoColor=white" alt="Svelte">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('jquery')">
+            <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white" alt="jQuery">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('nextjs')">
+            <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('nuxtjs')">
+            <img src="https://img.shields.io/badge/Nuxt.js-00C58E?style=flat&logo=nuxt.js&logoColor=white" alt="Nuxt.js">
+        </div>
+
+        <div class="dropdown-section">CSS Frameworks/Preprocessors</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('tailwind')">
+            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('bootstrap')">
+            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('sass')">
+            <img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white" alt="Sass">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('materialui')">
+            <img src="https://img.shields.io/badge/Material--UI-0081CB?style=flat&logo=material-ui&logoColor=white" alt="Material-UI">
+        </div>
+
+        <div class="dropdown-section">Backend Frameworks</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('nodejs')">
+            <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('express')">
+            <img src="https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white" alt="Express.js">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('django')">
+            <img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white" alt="Django">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('flask')">
+            <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white" alt="Flask">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('spring')">
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white" alt="Spring">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('laravel')">
+            <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white" alt="Laravel">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('dotnet')">
+            <img src="https://img.shields.io/badge/.NET-512BD4?style=flat&logo=.net&logoColor=white" alt=".NET">
+        </div>
+
+        <div class="dropdown-section">Databases</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('mysql')">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('postgresql')">
+            <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('mongodb')">
+            <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('redis')">
+            <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('sqlite')">
+            <img src="https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white" alt="SQLite">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('cassandra')">
+            <img src="https://img.shields.io/badge/Cassandra-1287B1?style=flat&logo=apache-cassandra&logoColor=white" alt="Cassandra">
+        </div>
+
+        <div class="dropdown-section">Cloud Platforms</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('aws')">
+            <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white" alt="AWS">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('azure')">
+            <img src="https://img.shields.io/badge/Azure-0089D6?style=flat&logo=microsoft-azure&logoColor=white" alt="Azure">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('gcp')">
+            <img src="https://img.shields.io/badge/GCP-4285F4?style=flat&logo=google-cloud&logoColor=white" alt="GCP">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('heroku')">
+            <img src="https://img.shields.io/badge/Heroku-430098?style=flat&logo=heroku&logoColor=white" alt="Heroku">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('netlify')">
+            <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white" alt="Netlify">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('vercel')">
+            <img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel">
+        </div>
+
+        <div class="dropdown-section">DevOps & Tools</div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('docker')">
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('kubernetes')">
+            <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white" alt="Kubernetes">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('jenkins')">
+            <img src="https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white" alt="Jenkins">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('git')">
+            <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('github')">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub">
+        </div>
+        <div class="dropdown-item">
+            <input type="checkbox" onchange="toggleSkill('gitlab')">
+            <img src="https://img.shields.io/badge/GitLab-FCA121?style=flat&logo=gitlab&logoColor=black" alt="GitLab">
+        </div>
