@@ -43,27 +43,14 @@
   .project {
     position: relative;
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
     border-radius: 8px;
     text-align: center;
     overflow: hidden;
     width: 300px;
+    padding: 15px;
   }
   
   .project::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(120deg, red, yellow, green, cyan, blue, violet);
-    animation: rgb-glow 4s linear infinite;
-    filter: blur(10px);
-    z-index: 1;
-  }
-  
-  .project::after {
     content: "";
     position: absolute;
     top: 0;
@@ -73,22 +60,24 @@
     border-radius: 8px;
     padding: 2px;
     background: linear-gradient(120deg, red, yellow, green, cyan, blue, violet);
+    background-size: 300% 300%;
+    animation: rgb-border 3s infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    z-index: 2;
+    z-index: 1;
   }
   
-  @keyframes rgb-glow {
+  @keyframes rgb-border {
     0% {
-      transform: translate(0, 0) rotate(0deg);
+      background-position: 0% 50%;
     }
     50% {
-      transform: translate(50%, 50%) rotate(180deg);
+      background-position: 100% 50%;
     }
     100% {
-      transform: translate(0, 0) rotate(360deg);
+      background-position: 0% 50%;
     }
   }
   
@@ -96,14 +85,14 @@
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    z-index: 3;
+    z-index: 2;
     position: relative;
   }
   
   .project h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    z-index: 3;
+    z-index: 2;
     position: relative;
   }
   
@@ -111,7 +100,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    z-index: 3;
+    z-index: 2;
     position: relative;
   }
   
