@@ -1,134 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-:root {
-    --primary-color: #ff00ff;
-    --secondary-color: #00ffff;
-    --background-color: #1a1a2e;
-    --text-color: #ffffff;
-}
-
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #141e30, #243b55);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .header {
     text-align: center;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-}
-
-main {
-    padding: 6rem 1rem 2rem;
-}
-
-h2 {
+    padding: 20px;
+    background-color: #1e2a38;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  
+  .projects {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 2rem;
+  }
+  
+  .projects h2 {
     font-size: 2rem;
-    color: var(--secondary-color);
-    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color);
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.project-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  }
+  
+  .project img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 1rem;
-}
-
-.project-title {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .project h3 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.project-buttons {
+    margin-bottom: 10px;
+  }
+  
+  .project-buttons {
     display: flex;
     justify-content: space-between;
-}
-
-.btn {
-    padding: 0.5rem 1rem;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-code {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-.btn-live {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-}
-
-.btn:hover {
-    opacity: 0.8;
-    box-shadow: 0 0 10px currentColor;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-footer a {
-    color: var(--primary-color);
     text-decoration: none;
-}
-
-footer a:hover {
+    color: #fff;
+    background-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #1e90ff;
+    box-shadow: 0 0 20px #1e90ff;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1e2a38;
+    font-size: 0.9rem;
+  }
+  
+  .footer a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
+  }
+  
