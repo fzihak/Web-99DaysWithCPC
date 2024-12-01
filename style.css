@@ -21,7 +21,6 @@
   .logo {
     font-size: 2.5rem;
     color: #fff;
-    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
   }
   
   .projects {
@@ -32,7 +31,6 @@
   .projects h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
   }
   
   .project-grid {
@@ -43,35 +41,78 @@
   }
   
   .project {
+    position: relative;
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
     width: 300px;
   }
   
-  .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  .project::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, red, yellow, green, cyan, blue, violet);
+    animation: rgb-glow 4s linear infinite;
+    filter: blur(10px);
+    z-index: 1;
+  }
+  
+  .project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(120deg, red, yellow, green, cyan, blue, violet);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 2;
+  }
+  
+  @keyframes rgb-glow {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(50%, 50%) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
   }
   
   .project img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
+    z-index: 3;
+    position: relative;
   }
   
   .project h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    z-index: 3;
+    position: relative;
   }
   
   .project-buttons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    z-index: 3;
+    position: relative;
   }
   
   .btn {
@@ -83,13 +124,11 @@
     text-decoration: none;
     color: #fff;
     background-color: #0ff;
-    box-shadow: 0 0 10px #0ff;
     transition: all 0.3s;
   }
   
   .btn:hover {
     background-color: #1e90ff;
-    box-shadow: 0 0 20px #1e90ff;
   }
   
   .footer {
