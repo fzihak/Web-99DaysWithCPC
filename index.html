@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>99 Day's Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>99 Day's Projects</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel" src="script.js"></script>
+  <header class="header">
+    <h1 class="logo">99 Day's Projects</h1>
+  </header>
+  <main>
+    <section class="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <!-- Repeat this block for each project -->
+        <div class="project">
+          <img src="https://via.placeholder.com/300" alt="Project Image">
+          <h3>Project Title</h3>
+          <div class="project-buttons">
+            <a href="#" class="btn neon-btn">See Code</a>
+            <a href="#" class="btn neon-btn">Live Link</a>
+          </div>
+        </div>
+        <!-- Repeat Ends -->
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Open Source Project. Credit goes to <a href="https://zihak.me">Foysal Zihak</a>.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
