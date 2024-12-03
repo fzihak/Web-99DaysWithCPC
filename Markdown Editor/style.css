@@ -440,4 +440,208 @@
   #preview {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
-  }  
+  } 
+  .dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
+  
+  .dark-mode .header,
+  .dark-mode .toolbar,
+  .dark-mode .editor-container,
+  .dark-mode .preview-container,
+  .dark-mode #editor,
+  .dark-mode .status-bar {
+    background-color: var(--dark-secondary);
+    color: var(--dark-text);
+  }
+  
+  .dark-mode .btn {
+    background-color: var(--dark-secondary);
+    border-color: #334155;
+    color: var(--dark-text);
+  }
+  
+  .dark-mode .btn:hover {
+    background-color: #334155;
+  }
+  
+  .dark-mode .toolbar-group {
+    background-color: var(--dark-background);
+  }
+  
+  .notification {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+  }
+  
+  .notification.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 1.25rem;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  
+  .notification.success {
+    background-color: var(--primary-color);
+  }
+  
+  .notification.error {
+    background-color: var(--accent-color);
+  }
+  
+  .notification.warning {
+    background-color: #FF9800;
+  }
+  
+  .notification.info {
+    background-color: #2196F3;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    min-width: 280px;
+    max-height: 400px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .dropdown {
+      position: static;
+      display: block;
+      width: 100%;
+    }
+  
+    .dropdown-content {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .dropdown-content {
+      width: 95%;
+      min-width: auto;
+    }
+  }
+  
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  
+  .search-container {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    font-family: var(--font-family);
+    outline: none;
+  }
+  
+  .search-input:focus {
+    border-color: var(--primary-color);
+  }
+  
+  .dropdown-item {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .dropdown-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+  
+  .dropdown-item img {
+    height: 20px;
+  }
+  
+  .dropdown-section {
+    padding: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dark-mode .dropdown-content {
+    background-color: var(--dark-secondary);
+    border-color: #334155;
+  }
+  
+  .dark-mode .search-container {
+    background-color: var(--dark-secondary);
+    border-color: #334155;
+  }
+  
+  .dark-mode .search-input {
+    background-color: var(--dark-background);
+    border-color: #334155;
+    color: var(--dark-text);
+  }
+  
+  .dark-mode .dropdown-item:hover {
+    background-color: var(--dark-background);
+  }
+  
+  .dark-mode .dropdown-section {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+    border-color: #334155;
+  }
