@@ -130,3 +130,93 @@ function formatText(command) {
             cursorOffset = formatted.length;
             break;
     }
+    editor.value = text.substring(0, start) + formatted + text.substring(end);
+        
+        const newPosition = start + (selectedText ? formatted.length : cursorOffset);
+        editor.selectionStart = newPosition;
+        editor.selectionEnd = newPosition;
+        
+        editor.focus();
+        updatePreview();
+    }
+
+    function copyToClipboard() {
+        const textToCopy = editor.value;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            showNotification('Content copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+            showNotification('Failed to copy content', 'error');
+        });
+    }
+    
+    function clearEditor() {
+    const editor = document.getElementById('editor');
+    editor.value = '';
+    updatePreview();
+    updateCounts();
+    showNotification('Editor content cleared!', 'success');
+}
+
+    function showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }, 100);
+    }
+
+    function togglePreviewMode() {
+        const editorContainer = document.querySelector('.editor-container');
+        const previewContainer = document.querySelector('.preview-container');
+        
+        isFullScreen = !isFullScreen;
+        
+        if (isFullScreen) {
+            editorContainer.style.display = 'none';
+            previewContainer.style.flex = '1';
+        } else {
+            editorContainer.style.display = 'flex';
+            previewContainer.style.flex = '1';
+        }
+    }
+
+    function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode);
+    }
+
+    function saveToLocalStorage() {
+        localStorage.setItem('markdownContent', editor.value);
+    }
+
+    function loadFromLocalStorage() {
+        const savedContent = localStorage.getItem('markdownContent');
+        if (savedContent) {
+            editor.value = savedContent;
+            updatePreview();
+        }
+        
+        if (localStorage.getItem('darkMode') === 'true') {
+            toggleDarkMode();
+        }
+    }
+    
+    function toggleDropdown(dropdownId) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                if (dropdown.contains(document.getElementById(dropdownId))) {
+                    dropdown.classList.toggle('active');
+                } else {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
