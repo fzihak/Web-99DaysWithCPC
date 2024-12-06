@@ -75,6 +75,8 @@
                 <i class="fas fa-minus"></i>
             </button>
         </div>
+        
+        <!-- Skills -->
         <div class="toolbar-group">
             <div class="dropdown">
     <button class="btn" onclick="toggleDropdown('skills-dropdown')">
@@ -439,89 +441,90 @@
     </div>
 </div>
 </div>
-<div class="toolbar-group">
-    <div class="dropdown">
-        <button class="btn" onclick="toggleDropdown('addons-dropdown')">
-            <i class="fas fa-puzzle-piece"></i>
-            <span>Add-ons</span>
-        </button>
-        <div id="addons-dropdown" class="dropdown-content">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search add-ons..." onkeyup="filterDropdownItems('addons-dropdown')">
-            </div>
-            <div class="dropdown-section">GitHub Stats</div>
-            <div class="dropdown-item">
-                <input type="checkbox" onchange="toggleAddon('visitor-badge')">
-                <span>Visitor Count Badge</span>
-            </div>
-            <div class="dropdown-item">
-                <input type="checkbox" onchange="toggleAddon('github-stats')">
-                <span>GitHub Stats</span>
-            </div>
-            <div class="dropdown-item">
-                <input type="checkbox" onchange="toggleAddon('github-trophy')">
-                <span>GitHub Trophy</span>
-            </div>
-            <div class="dropdown-section">Top Skills</div>
-            <div class="dropdown-item">
-                <input type="checkbox" onchange="toggleAddon('top-skills')">
-                <span>Display Top Skills</span>
+
+        <div class="toolbar-group">
+            <div class="dropdown">
+                <button class="btn" onclick="toggleDropdown('addons-dropdown')">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Add-ons</span>
+                </button>
+                <div id="addons-dropdown" class="dropdown-content">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search add-ons..." onkeyup="filterDropdownItems('addons-dropdown')">
+                    </div>
+                    <div class="dropdown-section">GitHub Stats</div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" onchange="toggleAddon('visitor-badge')">
+                        <span>Visitor Count Badge</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" onchange="toggleAddon('github-stats')">
+                        <span>GitHub Stats</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" onchange="toggleAddon('github-trophy')">
+                        <span>GitHub Trophy</span>
+                    </div>
+                    <div class="dropdown-section">Top Skills</div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" onchange="toggleAddon('top-skills')">
+                        <span>Display Top Skills</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 
-<main class="container">
-<div class="editor-container">
-    <div class="panel-header">
-        <span>Editor</span>
-        <div class="panel-header-actions">
-          <button class="btn" onclick="copyToClipboard()">
-            <i class="fas fa-copy"></i>
-            </button>
-            <button class="btn" onclick="clearEditor()">
-              <i class="fas fa-trash"></i>
-          </button>
+    <main class="container">
+        <div class="editor-container">
+            <div class="panel-header">
+                <span>Editor</span>
+                <div class="panel-header-actions">
+                  <button class="btn" onclick="copyToClipboard()">
+                    <i class="fas fa-copy"></i>
+                    </button>
+                    <button class="btn" onclick="clearEditor()">
+                      <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+            </div>
+            <textarea id="editor" placeholder="Start writing in Markdown..."></textarea>
+            <div class="status-bar">
+                <span id="wordCount">0 words</span>
+                <span id="charCount">0 characters</span>
+            </div>
         </div>
-    </div>
-    <textarea id="editor" placeholder="Start writing in Markdown..."></textarea>
-    <div class="status-bar">
-        <span id="wordCount">0 words</span>
-        <span id="charCount">0 characters</span>
-    </div>
-</div>
 
-<div class="preview-container">
-    <div class="panel-header">
-        <span>Preview</span>
-        <div class="panel-header-actions">
-            <button class="btn" onclick="togglePreviewMode()">
-                <i class="fas fa-eye"></i>
-            </button>
+        <div class="preview-container">
+            <div class="panel-header">
+                <span>Preview</span>
+                <div class="panel-header-actions">
+                    <button class="btn" onclick="togglePreviewMode()">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="preview"></div>
         </div>
+
+    <div id="notification" class="notification">
+        <span class="closebtn" onclick="hideNotification()">&times;</span>
+        <strong>Success!</strong> Your changes have been saved.
     </div>
-    <div id="preview"></div>
-</div>
-
-<div id="notification" class="notification">
-<span class="closebtn" onclick="hideNotification()">&times;</span>
-<strong>Success!</strong> Your changes have been saved.
-</div>
-</main>
-
-<footer class="footer">
-<div class="github-buttons">
-<a href="https://github.com/fzihak/Web-99DaysWithCPC" class="github-button" target="_blank">
-    <i class="fas fa-star animated-icon"></i> Star This
-</a>
-<a href="https://github.com/fzihak/Web-99DaysWithCPC/fork" class="github-button" target="_blank">
-    <i class="fas fa-code-branch animated-icon"></i> Fork This
-</a>
-</div>
+    </main>
+    
+    <footer class="footer">
+    <div class="github-buttons">
+        <a href="https://github.com/fzihak/Web-99DaysWithCPC" class="github-button" target="_blank">
+            <i class="fas fa-star animated-icon"></i> Star This
+        </a>
+        <a href="https://github.com/fzihak/Web-99DaysWithCPC/fork" class="github-button" target="_blank">
+            <i class="fas fa-code-branch animated-icon"></i> Fork This
+        </a>
+    </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
