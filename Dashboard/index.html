@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blur-gradient"></div>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="sidebar-logo">
+                <img src="assets/images/header_logo.jpg" alt="Coding Journey Logo">
+                <h2>My Journey</h2>
+            </div>
+            
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item active">
+                    <i class="fas fa-home"></i> Dashboard
+                </li>
+                <li class="sidebar-nav-item messages-nav">
+                  <i class="fas fa-envelope"></i> Messages
+                  <span class="message-badge"> </span>
+                  </li>
+                <li class="sidebar-nav-item">
+                    <i class="fas fa-chart-line"></i> Progress
+                </li>
+                <li class="sidebar-nav-item">
+                    <i class="fas fa-project-diagram"></i> Projects
+                </li>
+                <li class="sidebar-nav-item">
+                    <i class="fas fa-book-open"></i> Learning Paths
+                </li>
+                <li class="sidebar-nav-item">
+                    <i class="fas fa-trophy"></i> Achievements
+                </li>
+                <li class="sidebar-nav-item">
+                    <i class="fas fa-cog"></i> Settings
+                </li>
+            </ul>
+
+            <div class="user-profile">
+                <img src="assets/images/me.jpg" alt="User Avatar" class="user-avatar">
+                <span>Zihak</span>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="quick-stats">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Completed Courses</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-value">87%</div>
+                    <div class="stat-label">Overall Progress</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+            </div>
