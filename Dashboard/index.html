@@ -83,3 +83,108 @@
                     <div class="stat-label">Certifications</div>
                 </div>
             </div>
+            <div class="content-grid">
+                <!-- Learning ptogress card -->
+                <div class="dashboard-card" data-aos="fade-up">
+                    <h3><i class="fas fa-graduation-cap"></i> Learning Progress</h3>
+                    <canvas id="learningChart"></canvas>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Project status card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-tasks"></i> Active Projects</h3>
+                    <ul id="project-list" class="task-list"></ul>
+                </div>
+
+                <!-- Skill metrics card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-chart-pie"></i> Skill Metrics</h3>
+                    <canvas id="skillChart"></canvas>
+                </div>
+
+                <!-- Recent achievements card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-award"></i> Recent Achievements</h3>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <i class="fas fa-code"></i> Code Ninja
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-bug"></i> Bug Squasher
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-fire"></i> 7-Day Streak
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-star"></i> Top Contributor
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Code progression Line chart -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="1000">
+                  <h3><i class="fas fa-code"></i> Code Progression Metrics</h3>
+                  <canvas id="codeProgressionChart">
+                  </canvas>
+              <div class="chart-description">
+                 <p>Visualizing code volume and complexity growth over time</p>
+                 </div>
+              </div>
+              
+                <!-- Upcoming deadlines card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-calendar-alt"></i> Upcoming Deadlines</h3>
+                    <ul id="deadline-list" class="task-list"></ul>
+                </div>
+
+                <!-- Learning recommendations card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fas fa-lightbulb"></i> Recommended for You</h3>
+                    <ul id="recommendation-list" class="task-list"></ul>
+                </div>
+
+                <!-- Coding activity calendar -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fas fa-code"></i> Coding Activity</h3>
+                    <div id="coding-calendar" class="coding-calendar"></div>
+                </div>
+
+                <!-- Leaderboard -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="700">
+                    <h3><i class="fas fa-crown"></i> Leaderboard</h3>
+                    <ul id="leaderboard-list" class="leaderboard-list"></ul>
+                </div>
+
+                <!-- Resource links -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="800">
+                    <h3><i class="fas fa-link"></i> Useful Resources</h3>
+                    <ul class="resource-list">
+                        <li class="resource-item"><a href="#" class="resource-link">MDN Web Docs</a></li>
+                        <li class="resource-item"><a href="#" class="resource-link">freeCodeCamp</a></li>
+                        <li class="resource-item"><a href="#" class="resource-link">Stack Overflow</a></li>
+                        <li class="resource-item"><a href="#" class="resource-link">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-center" id="notificationCenter"></div>
+    
+    <div class="messages-container" id="messagesContainer">
+    <div class="messages-header">
+        <h3>Messages</h3>
+        <button class="close-messages" id="closeMessages">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="messages-list" id="messagesList"></div>
+    </div>
+    <script src="messages.js"></script>
+    <script src ="script.js"></script>
+    </body>
+</html>
