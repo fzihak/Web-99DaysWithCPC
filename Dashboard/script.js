@@ -292,4 +292,182 @@ AOS.init({
     `;
     deadlineList.appendChild(listItem);
   });
-  
+ // Learning recommendations
+ const recommendationList = document.getElementById('recommendation-list');
+ const recommendations = [{
+   course: 'Advanced React Patterns', difficulty: 'Intermediate'
+ },
+   {
+     course: 'Machine Learning Fundamentals', difficulty: 'Advanced'
+   },
+   {
+     course: 'GraphQL API Design', difficulty: 'Intermediate'
+   },
+   {
+     course: 'Blockchain Development', difficulty: 'Advanced'
+   },
+   {
+     course: 'Cybersecurity Basics', difficulty: 'Beginner'
+   }];
+
+ recommendations.forEach(recommendation => {
+   const listItem = document.createElement('li');
+   listItem.className = 'task-item';
+   listItem.innerHTML = `
+   <span>${recommendation.course}</span>
+   <span class="task-status">${recommendation.difficulty}</span>
+   `;
+   recommendationList.appendChild(listItem);
+ });
+
+ // Notification system (optional)
+ //            function showNotification(message, icon = 'fa-info-circle') {
+ //                const notification = document.createElement('div');
+ //                notification.className = 'notification';
+ //               notification.innerHTML = `
+ //                    <i class="fas ${icon}"></i>
+ //                    <span>${message}</span>
+ //                `;
+ //                document.getElementById('notificationCenter').appendChild(notification);
+
+ //                notification.offsetHeight;
+
+ //                notification.classList.add('show');
+ //
+ //                setTimeout(() => {
+ //                    notification.classList.remove('show');
+ //                    setTimeout(() => {
+ //                        notification.remove();
+ //                    }, 300);
+ //                }, 3000);
+ //            }
+
+ // Single notification
+ //            setTimeout(() => showNotification('New course recommendation available!', 'fa-graduation-cap'), 2000);
+
+ // Sidebar
+ document.querySelectorAll('.sidebar-nav-item').forEach(item => {
+   item.addEventListener('click', function() {
+     document.querySelector('.sidebar-nav-item.active').classList.remove('active');
+     this.classList.add('active');
+   });
+ });
+
+ // Progress bar
+ function updateProgressBar() {
+   const progressBar = document.querySelector('.progress-bar-fill');
+   let width = 0;
+   const interval = setInterval(() => {
+     if (width >= 75) {
+       clearInterval(interval);
+     } else {
+       width++;
+       progressBar.style.width = width + '%';
+     }
+   },
+     20);
+ }
+
+ updateProgressBar();
+
+ // Mobile menu toggle
+ const menuToggle = document.getElementById('menuToggle');
+ const sidebar = document.getElementById('sidebar');
+ const sidebarClose = document.getElementById('sidebarClose');
+
+ menuToggle.addEventListener('click',
+   () => {
+     sidebar.classList.add('active');
+     menuToggle.style.display = 'none';
+   });
+
+ sidebarClose.addEventListener('click',
+   () => {
+     sidebar.classList.remove('active');
+     menuToggle.style.display = 'flex';
+   });
+
+ document.addEventListener('click',
+   (e) => {
+     if (window.innerWidth <= 768 && !sidebar.contains(e.target) && e.target !== menuToggle) {
+       sidebar.classList.remove('active');
+       menuToggle.style.display = 'flex';
+     }
+   });
+
+ // Resize handler
+ function handleResize() {
+   if (window.innerWidth > 768) {
+     sidebar.classList.remove('active');
+     menuToggle.style.display = 'none';
+   } else {
+     menuToggle.style.display = 'flex';
+   }
+ }
+
+ window.addEventListener('resize', handleResize);
+ handleResize();
+
+ // Coding activity calendar
+ const calendarContainer = document.getElementById('coding-calendar');
+ const days = 35; // 5 weeks
+
+ for (let i = 0; i < days; i++) {
+   const day = document.createElement('div');
+   day.className = 'calendar-day';
+   const activity = Math.random();
+   if (activity > 0.7) {
+     day.classList.add('activity-activity-high');
+   } else if (activity > 0.4) {
+     day.classList.add('activity-medium');
+   } else if (activity > 0.1) {
+     day.classList.add('activity-low');
+   }
+   calendarContainer.appendChild(day);
+ }
+
+ // Leaderboard
+ const leaderboardList = document.getElementById('leaderboard-list');
+ const leaderboardData = [{
+   rank: 1,
+   name: 'Ethan',
+   score: 2500,
+   avatar: 'assets/images/message_avatar5.jpg'
+ },
+   {
+     rank: 2,
+     name: 'Charlie',
+     score: 2350,
+     avatar: 'assets/images/message_avatar3.jpg'
+   },
+   {
+     rank: 3,
+     name: 'Alice',
+     score: 2200,
+     avatar: 'assets/images/message_avatar1.jpg'
+   },
+   {
+     rank: 4,
+     name: 'Fiona',
+     score: 2100,
+     avatar: 'assets/images/message_avatar6.jpg'
+   },
+   {
+     rank: 5,
+     name: 'Diana',
+     score: 2000,
+     avatar: 'assets/images/message_avatar4.jpg'
+   }];
+
+ leaderboardData.forEach(user => {
+   const listItem = document.createElement('li');
+   listItem.className = 'leaderboard-item';
+   listItem.innerHTML = `
+   <span class="leaderboard-rank">${user.rank}</span>
+   <img src="${user.avatar}" alt="${user.name}" class="leaderboard-avatar">
+   <span class="leaderboard-name">${user.name}</span>
+   <span class="leaderboard-score">${user.score}</span>
+   `;
+   leaderboardList.appendChild(listItem);
+ });
+});  
