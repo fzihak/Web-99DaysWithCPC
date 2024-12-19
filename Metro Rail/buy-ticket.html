@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Ticket - Dhaka Metro Rail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="img/logo.png" alt="Metro Logo" class="logo">
+            <span>Dhaka Metro</span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="buy-ticket.html">Buy Ticket</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html" class="account-btn">My Account</a></li>
+            <li class="language-switch">
+                <button onclick="toggleLanguage()">EN | বাং</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="ticket-main">
+        <div class="ticket-container">
+            <h1>Purchase Tickets</h1>
+            
+            <div class="ticket-form">
+                <div class="station-selector">
+                    <div class="from-station">
+                        <label for="fromStation">From Station</label>
+                        <select id="fromStation" required>
+                            <option value="">Select Station</option>
+                            <option value="uttara">Uttara North</option>
+                            <option value="uttara-center">Uttara Center</option>
+                            <option value="uttara-south">Uttara South</option>
+                            <option value="pallabi">Pallabi</option>
+                            <option value="mirpur11">Mirpur 11</option>
+                            <option value="mirpur10">Mirpur 10</option>
+                            <option value="kazipara">Kazipara</option>
+                            <option value="shewrapara">Shewrapara</option>
+                            <option value="agargaon">Agargaon</option>
+                        </select>
+                    </div>
+
+                    <div class="station-swap">
+                        <button id="swapStations">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+
+                    <div class="to-station">
+                        <label for="toStation">To Station</label>
+                        <select id="toStation" required>
+                            <option value="">Select Station</option>
+                            <!-- Same options as fromStation -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ticket-type">
+                    <h3>Select Ticket Type</h3>
+                    <div class="ticket-options">
+                        <div class="ticket-option">
+                            <input type="radio" id="singleTrip" name="ticketType" value="single" checked>
+                            <label for="singleTrip">
+                                <span class="option-title">Single Trip</span>
+                                <span class="option-desc">Valid for one journey only</span>
+                            </label>
+                        </div>
+
+                        <div class="ticket-option">
+                            <input type="radio" id="roundTrip" name="ticketType" value="round">
+                            <label for="roundTrip">
+                                <span class="option-title">Round Trip</span>
+                                <span class="option-desc">Valid for return journey</span>
+                            </label>
+                        </div>
+
+                        <div class="ticket-option">
+                            <input type="radio" id="dayPass" name="ticketType" value="day">
+                            <label for="dayPass">
+                                <span class="option-title">Day Pass</span>
+                                <span class="option-desc">Unlimited trips for 24 hours</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fare-display">
+                    <h3>Fare Details</h3>
+                    <div class="fare-breakdown">
+                        <div class="fare-item">
+                            <span>Base Fare:</span>
+                            <span id="baseFare">৳0.00</span>
+                        </div>
+                        <div class="fare-item">
+                            <span>Service Charge:</span>
+                            <span id="serviceCharge">৳0.00</span>
+                        </div>
+                        <div class="fare-total">
+                            <span>Total:</span>
+                            <span id="totalFare">৳0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="purchase-btn" id="purchaseTicket">
+                    Purchase Ticket
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="schedule.html">Train Schedule</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@dhakametro.gov.bd</p>
+                <p>Phone: +880 2 XXXXXXXX</p>
+                <p>Emergency: 999</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dhaka Metro Rail. All rights reserved. Develop By Foysal Zihak</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ticket.js"></script>
+</body>
+</html>
