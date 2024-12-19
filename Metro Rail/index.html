@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaka Metro Rail - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="img/logo.png" alt="Metro Logo" class="logo">
+            <span>Dhaka Metro</span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="buy-ticket.html">Buy Ticket</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html" class="account-btn">My Account</a></li>
+            <li class="language-switch">
+                <button onclick="toggleLanguage()">EN | বাং</button>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="img/logo.png" alt="bg" class="bg">
+            <h1>Welcome to Dhaka Metro Rail</h1>
+            <p>Your modern commute solution</p>
+            <a href="buy-ticket.html" class="cta-button">Buy Tickets Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <h2>Why Choose Dhaka Metro?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Time-Saving</h3>
+                    <p>Quick and efficient travel across the city</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly</h3>
+                    <p>Reducing carbon footprint with electric trains</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Affordable</h3>
+                    <p>Cost-effective transportation solution</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe Travel</h3>
+                    <p>Modern safety systems and trained staff</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="route-map">
+            <h2>Metro Route Map</h2>
+            <div class="map-container">
+                <img src="/api/placeholder/800/400" alt="Metro Route Map" class="route-map-img">
+            </div>
+        </section>
+
+        <section class="latest-updates">
+            <h2>Latest Updates</h2>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3>New Station Opening</h3>
+                    <p>Agargaon station now operational</p>
+                    <span class="date">December 2023</span>
+                </div>
+                <div class="update-card">
+                    <h3>Digital Payments</h3>
+                    <p>Now accepting all major digital payment methods</p>
+                    <span class="date">January 2024</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="schedule.html">Train Schedule</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@dhakametro.gov.bd</p>
+                <p>Phone: +880 2 XXXXXXXX</p>
+                <p>Emergency: 999</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dhaka Metro Rail. All rights reserved. Develop By Foysal Zihak</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
