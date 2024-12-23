@@ -1,0 +1,150 @@
+/* Base Variables */
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --light-gray: #f5f6fa;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --gradient: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links .active {
+    color: var(--primary-color);
+}
+
+.account-btn {
+    padding: 0.5rem 1rem;
+    background: var(--gradient);
+    color: var(--white) !important;
+    border-radius: 50px;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    background: var(--white);
+    margin-top: 70px;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-block;
+    text-align: center;
+    min-width: 160px;
+}
+
+.cta-button.primary {
+    background: var(--gradient);
+    color: var(--white);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
