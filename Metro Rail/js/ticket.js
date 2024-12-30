@@ -37,3 +37,36 @@ $(document).ready(function() {
         const distance = Math.abs(
             stationData[toStation].distance - stationData[fromStation].distance
         );
+        // Base fare calculation (20 taka base + 5 taka per km)
+        let baseFare = 20 + (distance * 5);
+        let serviceCharge = baseFare * 0.05; // 5% service charge
+
+        // Adjust fare based on ticket type
+        switch(ticketType) {
+            case 'round':
+                baseFare *= 1.9; // 5% discount on return journey
+                break;
+            case 'day':
+                baseFare *= 2.5; // Day pass costs 2.5 times single journey
+                break;
+        }
+
+        // Update fare display
+        $('#baseFare').text(`৳${baseFare.toFixed(2)}`);
+        $('#serviceCharge').text(`৳${serviceCharge.toFixed(2)}`);
+        $('#totalFare').text(`৳${(baseFare + serviceCharge).toFixed(2)}`);
+    }
+
+    // Event listeners
+    $('#fromStation, #toStation').change(calculateFare);
+    $('input[name="ticketType"]').change(calculateFare);
+
+    // Station swap functionality
+    $('#swapStations').click(function() {
+        const fromVal = $('#fromStation').val();
+        const toVal = $('#toStation').val();
+        
+        $('#fromStation').val(toVal);
+        $('#toStation').val(fromVal);
+        calculateFare();
+    });
