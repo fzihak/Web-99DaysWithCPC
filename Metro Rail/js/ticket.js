@@ -70,3 +70,25 @@ $(document).ready(function() {
         $('#toStation').val(fromVal);
         calculateFare();
     });
+    // Purchase ticket
+    $('#purchaseTicket').click(function() {
+        const fromStation = $('#fromStation').val();
+        const toStation = $('#toStation').val();
+
+        if (!fromStation || !toStation) {
+            showNotification('Please select both stations');
+            return;
+        }
+
+        if (fromStation === toStation) {
+            showNotification('Please select different stations');
+            return;
+        }
+
+        // Check if user is logged in (implement this based on your authentication system)
+        const isLoggedIn = false; // This should be replaced with actual auth check
+
+        if (!isLoggedIn) {
+            showLoginPrompt();
+            return;
+        }
