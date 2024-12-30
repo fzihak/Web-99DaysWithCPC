@@ -92,3 +92,107 @@ $(document).ready(function() {
             showLoginPrompt();
             return;
         }
+
+        // Proceed with purchase (implement actual payment integration)
+        showNotification('Proceeding to payment...');
+    });
+
+    // Show login prompt
+    function showLoginPrompt() {
+        const loginPrompt = $(`
+            <div class="login-prompt">
+                <div class="login-content">
+                    <h3>Login Required</h3>
+                    <p>Please log in to purchase tickets</p>
+                    <div class="login-buttons">
+                        <button class="login-btn">Login</button>
+                        <button class="register-btn">Register</button>
+                    </div>
+                </div>
+            </div>
+        `).appendTo('body');
+        loginPrompt.find('.login-btn').click(function() {
+            window.location.href = 'login.html';
+        });
+        loginPrompt.find('.register-btn').click(function() {
+            window.location.href = 'register.html';});
+
+        loginPrompt.click(function(e) {
+            if (e.target === this) {
+                loginPrompt.remove();
+            }
+        });
+
+        // Add these styles
+        const styles = `
+            .login-prompt {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            }
+
+            .login-content {
+                background: white;
+                padding: 2rem;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .login-buttons {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .login-btn, .register-btn {
+                padding: 0.5rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .login-btn {
+                background: var(--primary-color);
+                color: white;
+            }
+
+            .register-btn {
+                background: #eee;
+                color: var(--text-color);
+            }
+
+            .login-btn:hover {
+                background: var(--secondary-color);
+            }
+
+            .register-btn:hover {
+                background: #ddd;
+            }
+        `;
+
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = styles;
+        document.head.appendChild(styleSheet);
+    }
+
+    // Show notification
+    function showNotification(message) {
+        const notification = $(`
+            <div class="notification">
+                ${message}
+            </div>
+        `).appendTo('body');
+
+        setTimeout(() => {
+            notification.fadeOut(() => notification.remove());
+        }, 3000);
+    }
+});
