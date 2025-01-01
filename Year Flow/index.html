@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YearFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="date" id="currentDate"></div>
+        <div class="main-content">
+            <div class="digital-clock">
+                <div class="time-section">
+                    <div class="time-box" id="hours">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box" id="minutes">00</div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box" id="seconds">00</div>
+                    <div class="ampm" id="ampm">AM</div>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="day-text">
+                    <span>D</span>
+                    <span>A</span>
+                    <span>Y</span>
+                </div>
+                <div class="number-container">
+                    <div class="number" id="dayNumber">01</div>
+                    <div class="separator">/</div>
+                    <div class="total">365</div>
+                </div>
+            </div>
+        </div>
+        <div class="quote" id="dailyQuote"></div>
+        <div class="progress-bar">
+            <div class="progress" id="yearProgress"></div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Days Passed</div>
+                <div class="stat-value" id="daysPassed">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Days Remaining</div>
+                <div class="stat-value" id="daysRemaining">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Year Progress</div>
+                <div class="stat-value" id="progressPercent">0%</div>
+            </div>
+        </div>
+    </div>
+    <footer class="copyright">
+        <p>
+            Developed with <span class="heart">❤️</span> by Foysal Zihak | 
+            Open Source Project
+            <a href="https://github.com/fzihak/YearFlow" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="github-icon">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
