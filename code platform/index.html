@@ -1,0 +1,182 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-code"></i> code.zone
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>My Feed</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Groups</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge">1</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span>Bookmarks</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-ellipsis"></i>
+                    <span>More</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <span>Dark Theme</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="user-profile">
+                    <img src="img/profile.webp" alt="User Avatar">
+                    <span>Foysal Zihak</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="top-menu">
+                    <a href="#">Discuss</a>
+                    <a href="#">Discover</a>
+                    <a href="#">Hackathons</a>
+                </div>
+            </div>
+
+            <!-- New Post Section -->
+            <div class="new-post">
+                <input type="text" placeholder="New Post">
+                <div class="post-actions">
+                    <button><i class="fas fa-image"></i></button>
+                    <button><i class="fas fa-link"></i></button>
+                    <button>More</button>
+                    <button class="post-btn">Post</button>
+                </div>
+            </div>
+
+            <!-- Feed Navigation -->
+            <div class="feed-nav">
+                <button class="active"><i class="fas fa-heart"></i> Following</button>
+                <button><i class="fas fa-star"></i> Featured</button>
+                <button><i class="fas fa-arrow-trend-up"></i> Rising</button>
+            </div>
+
+            <!-- Posts -->
+            <div class="posts">
+                <!-- Sample Post -->
+                <article class="post">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <img src="img/profile.webp" alt="User Avatar">
+                            <div>
+                                <h3>zihak <i class="fas fa-check-circle"></i></h3>
+                                <span>2 hours ago</span>
+                            </div>
+                        </div>
+                        <button class="more-options"><i class="fas fa-ellipsis"></i></button>
+                    </div>
+                    <div class="post-content">
+                        <h2>🧑‍💻 TypeScript useful advanced types</h2>
+                        <p>As the title says, here are all the useful types that I'm using every day or create new types on top of them...</p>
+                        <div class="code-block">
+                            <!-- Code content will go here -->
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="fas fa-thumbs-up"></i> 204</span>
+                            <span><i class="fas fa-comment"></i> 24</span>
+                            <span><i class="fas fa-share"></i> 40</span>
+                        </div>
+                        <div class="post-tags">
+                            <span>#typescript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Pro Banner -->
+            <div class="pro-banner">
+                <div class="banner-content">
+                    <h3>Introducing Pro</h3>
+                    <p>Boost your publishing with our new premium features.</p>
+                    <div class="banner-actions">
+                        <button class="upgrade-btn">Upgrade Now</button>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+                <button class="close-banner"><i class="fas fa-times"></i></button>
+            </div>
+
+            <!-- Trending Topics -->
+            <div class="trending-topics">
+                <h3>Trending Topics</h3>
+                <div class="topics">
+                    <span>#linode</span>
+                    <span>#avalanche</span>
+                    <span>#ankr</span>
+                    <span>#thmwebapps</span>
+                    <span>#dev</span>
+                    <span>#polygon</span>
+                    <span>#90daysofdevops</span>
+                </div>
+            </div>
+
+            <!-- Official Channels -->
+            <div class="official-channels">
+                <h3>Official Channels <i class="fas fa-check"></i></h3>
+                <div class="channel-list">
+                    <a href="#" class="channel">
+                        <img src="img/vscode.png" alt="VS Code">
+                        <span>VS Code</span>
+                    </a>
+                    <a href="#" class="channel">
+                        <img src="img/react.webp" alt="React">
+                        <span>React</span>
+                    </a>
+                    <a href="#" class="channel">
+                        <img src="img/ShadcnUI.png" alt="Shadcn/UI">
+                        <span>Shadcn/UI</span>
+                        <button class="follow-btn">Follow</button>
+                    </a>
+                    <!-- Add more channels -->
+                </div>
+            </div>
+        </aside>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
+    <script src="script.js"></script>
+</body>
+</html>
