@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chat App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search chats...">
+                </div>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <div class="avatar">
+                        <img src="/api/placeholder/48/48" alt="User 1">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-name">John Doe</div>
+                        <div class="last-message">Hey, how are you?</div>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="/api/placeholder/48/48" alt="User 2">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-name">Jane Smith</div>
+                        <div class="last-message">See you tomorrow!</div>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <div class="avatar">
+                        <img src="/api/placeholder/48/48" alt="User 3">
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-name">Mike Johnson</div>
+                        <div class="last-message">Thanks for your help!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="avatar">
+                    <img src="/api/placeholder/48/48" alt="Current Chat">
+                </div>
+                <div class="chat-info">
+                    <div class="chat-name">John Doe</div>
+                    <div class="status">Online</div>
+                </div>
+                <div class="chat-actions">
+                    <div class="action-btn">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="messages-container">
+                <div class="message received">
+                    Hi! How are you doing?
+                </div>
+                <div class="message sent">
+                    Hey! I'm doing great, thanks for asking. How about you?
+                </div>
+                <div class="message received">
+                    I'm good too! Want to grab coffee tomorrow?
+                </div>
+                <div class="message sent">
+                    Sure, that sounds great! How about 10 AM?
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="action-btn">
+                    <i class="fas fa-paperclip"></i>
+                </div>
+                <input type="text" class="message-input" placeholder="Type a message...">
+                <div class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
