@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Programming Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="theme-highlight">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <header class="app-header">
+            <h1>AI Programming Assistant</h1>
+            <div class="header-controls">
+                <button id="clear-history" class="control-button" title="Clear Chat History">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                    </svg>
+                </button>
+                <button id="theme-toggle" class="control-button" title="Toggle Theme">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main id="chat-container">
+            <div id="chat-messages" class="messages-container">
+                <div class="welcome-message message ai-message">
+                    <h2>Welcome to AI Programming Assistant! 👋</h2>
+                    <p>I can help you with:</p>
+                    <ul>
+                        <li>Code explanations and debugging</li>
+                        <li>Programming concepts and best practices</li>
+                        <li>Code optimization and refactoring</li>
+                        <li>Algorithm explanations</li>
+                    </ul>
+                    <p>How can I assist you today?</p>
+                </div>
+            </div>
+
+            <div id="connection-status" class="connection-status"></div>
+            
+            <div id="input-container" class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="message-input" 
+                        placeholder="Ask me about programming..."
+                        rows="1"
+                        maxlength="2000"
+                    ></textarea>
+                    <div class="input-actions">
+                        <span id="char-count" class="char-count">0/2000</span>
+                        <button id="send-button" class="send-button" disabled>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <h3>Connection Error</h3>
+            <p id="error-message"></p>
+            <button id="retry-connection">Retry Connection</button>
+        </div>
+    </div>
+    <template id="message-template">
+        <div class="message">
+            <div class="message-content"></div>
+            <div class="message-info">
+                <span class="message-time"></span>
+            </div>
+        </div>
+    </template>
+
+    <template id="code-block-template">
+        <div class="code-block">
+            <div class="code-header">
+                <span class="language-tag"></span>
+                <button class="copy-button" title="Copy code">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                    </svg>
+                </button>
+            </div>
+            <pre><code></code></pre>
+        </div>
+    </template>
+    <script src="js/utils.js"></script>
+    <script src="js/messageHandler.js"></script>
+    <script src="js/websocket.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
