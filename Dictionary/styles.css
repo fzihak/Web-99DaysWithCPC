@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #4ecdc4;
+}
+
+#search-button {
+    padding: 15px 30px;
+    background: #4ecdc4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-button:hover {
+    background: #45b7af;
+    transform: translateY(-2px);
+}
+
+.result {
+    display: none;
+}
+
+.result.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.word-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.word {
+    font-size: 2rem;
+    color: #333;
+}
+
+.sound-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.sound-button:hover {
+    background: #f0f0f0;
+}
+
+.phonetic {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.meanings {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.part-of-speech {
+    color: #4ecdc4;
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.definition {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.example {
+    margin-top: 5px;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    display: none;
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

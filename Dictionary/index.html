@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dictionary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Online Dictionary</h1>
+        
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Type a word here..."
+            >
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="result" id="result">
+            <div class="word-header">
+                <h2 class="word" id="word"></h2>
+                <button class="sound-button" id="sound-button">
+                    🔊
+                </button>
+            </div>
+
+            <div class="word-details">
+                <p class="phonetic" id="phonetic"></p>
+                <div class="meanings" id="meanings"></div>
+            </div>
+
+            <div class="error" id="error">
+                Word not found. Please try another word.
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
