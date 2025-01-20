@@ -1,0 +1,44 @@
+{
+    "private": true,
+    "name": "chatvia",
+    "version": "1.1.0",
+    "description": "Admin Dashboard Template",
+    "main": "vite.config.js",
+    "author": "Themesbrand",
+    "browserslist": [
+        "last 2 version",
+        "> 2%"
+    ],
+    "scripts": {
+        "clean": "rimraf dist",
+        "start": "vite",
+        "build": "npm run clean && vite build"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.2",
+        "postcss": "^8.4.5",
+        "rimraf": "^5.0.1",
+        "vite": "^4.4.9",
+        "vite-plugin-handlebars": "^1.6.0",
+        "fs-extra": "^11.1.1",
+        "rollup-plugin-copy": "^3.4.0"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^27.1.0",
+        "@curiosityx/bootstrap-session-timeout": "^1.0.0",
+        "@popperjs/core": "^2.11.6",
+        "@tailwindcss/forms": "^0.5.0",
+        "admin-resources": "git+https://github.com/themesbrand/admin-resources#master",
+        "chance": "^1.1.12",
+        "jquery": "^3.7.1",
+        "magnific-popup": "^1.2.0",
+        "node-waves": "^0.7.6",
+        "owl.carousel": "^2.3.4",
+        "postcss": "^8.4.47",
+        "postcss-import": "^16.1.0",
+        "postcss-nested": "^7.0.2",
+        "postcss-nesting": "^13.0.1",
+        "simplebar": "^6.2.7",
+        "tailwindcss": "^3.4.14"
+    }
+}

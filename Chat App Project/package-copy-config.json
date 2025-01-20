@@ -1,0 +1,12 @@
+{
+    "packagesToCopy": [
+        "axios",
+        "owl.carousel",
+        "magnific-popup",
+        "jquery",
+        "tailwindcss",
+        "simplebar",
+        "@popperjs/core"
+    ]
+  }
+  
