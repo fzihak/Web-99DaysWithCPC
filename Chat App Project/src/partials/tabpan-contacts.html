@@ -1,0 +1,573 @@
+<!-- Start chat content -->
+<div>
+    <div class="p-6 pb-0">
+        <div class="ltr:float-right rtl:float-left">
+            <div class="relative">
+                <!-- Button trigger modal -->
+                <button type="button" class="px-4 text-lg text-gray-500 group/tag" data-tw-toggle="modal" data-tw-target="#modal-id2">
+                    <i class="mr-1 ri-user-add-line ms-0 dark:text-violet-200"></i>
+                    <span class="absolute items-center hidden mb-6 top-8 group-hover/tag:flex ltr:-left-8 rtl:-right-8">
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Add Contact</span>
+                        <span class="w-3 h-3 -mt-6 rotate-45 bg-black ltr:-ml-12 rtl:-mr-12"></span>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <h4 class="mb-6 dark:text-gray-50">Contacts</h4>
+
+        <div class="relative z-50 hidden modal" id="modal-id2" aria-modal="true" role="modal-fifth">
+            <div class="fixed inset-0 z-50 overflow-hidden">
+                <div class="absolute inset-0 transition-opacity bg-black bg-opacity-50 modal-overlay"></div>
+                <div class="flex items-center justify-center max-w-lg min-h-screen p-4 mx-auto text-center animate-translate">
+                    <div class="relative w-full max-w-lg my-8 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl -top-10 dark:bg-zinc-700">
+                        <div class="bg-violet-800/10 dark:bg-zinc-700">
+                            <div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-zinc-500">
+                                <h5 class="mb-0 text-gray-800 text-16 dark:text-gray-50" id="addgroup-exampleModaL">Add Contact</h5>
+                                <button type="button" class="absolute top-3 ltr:right-2.5 rtl:left-2.5 text-gray-400 border-transparent hover:bg-gray-50/50/50 hover:text-gray-900 rounded-lg text-sm px-2 py-1 ml-auto inline-flex items-center dark:hover:bg-zinc-600 dark:text-gray-100" data-tw-dismiss="modal">
+                                    <i class="text-xl text-gray-500 mdi mdi-close dark:text-zinc-100/60"></i>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <form>
+                                    <div class="mb-5 ltr:text-left rtl:text-right">
+                                        <label class="block mb-2 dark:text-gray-300">Email</label>
+                                        <input type="text" class="py-1.5 bg-transparent border-gray-100 rounded placeholder:text-13 w-full focus:border-violet-500 focus:ring-0 focus:ring-offset-0 dark:border-zinc-500 dark:placeholder:text-gray-300" id="addgroupname-input1" placeholder="Enter Email">
+                                    </div>
+
+                                    <div class="mb-5 ltr:text-left rtl:text-right">
+                                        <label class="block mb-2 dark:text-gray-300">Invatation Message</label>
+                                        <textarea class="w-full bg-transparent border-gray-100 rounded placeholder:text-13 focus:border-violet-500 focus:ring-0 focus:ring-offset-0 dark:border-zinc-500 dark:placeholder:text-gray-300" id="addgroupdescription-input1" rows="3" placeholder="Enter Message"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex justify-end p-4 border-t border-gray-100 dark:border-zinc-500">
+                                <div>
+                                    <button type="button" class="border-0 btn hover:underline group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500" data-tw-dismiss="modal">Close</button>
+                                    <button type="button" class="text-white border-transparent btn group-data-[theme-color=violet]:bg-violet-500 group-data-[theme-color=violet]:hover:bg-violet-600 group-data-[theme-color=green]:bg-green-500 group-data-[theme-color=green]:hover:bg-green-600 group-data-[theme-color=red]:bg-red-500 group-data-[theme-color=red]:hover:bg-red-600">Invite Contact</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-1 mt-5 mb-5 group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 rounded group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600">
+            <span class="group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 pe-1 ps-3 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600" id="basic-addon">
+                <i class="text-lg text-gray-700 ri-search-line search-icon dark:text-gray-200"></i>
+            </span>
+            <input type="text" class="border-0 group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600 placeholder:text-[14px] focus:ring-offset-0 focus:outline-none focus:ring-0 placeholder:dark:text-gray-300" placeholder="Search users.." aria-describedby="basic-addon">
+        </div>
+    </div>
+
+        <!-- Start contact lists -->
+        <div class="h-[80vh]" data-simplebar>
+
+            <div class="p-6">
+                <div>
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        A
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Albert Rodarte</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonB">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonB">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Allison Etter</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonC">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonC">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end contact list A -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        C
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Craig Smiley</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonD">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonD">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end contact list C -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        D
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Daniel Clay</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonEM">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonEM">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Doris Brown</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonES">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonES">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list D -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        I
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Iris Wells</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonF">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonF">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end contact list I -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        J
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Juan Flakes</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonG">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonG">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">John Hall</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonH">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonH">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Joy Southern</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonI">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonI">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end contact list J -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        M
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Mary Farmer</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonJ">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonJ">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Mark Messer</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonK">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonK">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Michael Hinton</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonL">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonL">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list M -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        O
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Ossie Wilson</h5>
+                                </div>
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonM">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonM">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list O -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        P
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Phillis Griffin</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonN">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonN">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Paul Haynes</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonO">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonO">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list P -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        R
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Rocky Jackson</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonP">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonP">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list R -->
+                
+                <div class="mt-3">
+                    <div class="p-3 font-bold group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+                        S
+                    </div>
+                
+                    <ul class="list-unstyled contact-list">
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Sara Muller</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonQ">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonQ">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Simon Velez</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonR">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonR">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-5 py-[15px]">
+                            <div class="flex items-center">
+                                <div class="flex-grow">
+                                    <h5 class="m-0 text-gray-700 text-14 dark:text-gray-50">Steve Walker</h5>
+                                </div>
+                
+                                <div class="relative flex-shrink-0 dropdown">
+                                    <button class="p-0 text-gray-400 border-0 btn dropdown-toggle dark:text-gray-300" type="button" data-bs-toggle="dropdown" id="dropdownMenuButtonS">
+                                        <i class="text-lg ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="absolute z-50 block w-40 py-2 my-6 text-left list-none bg-white border border-transparent rounded shadow-lg rtl:left-0 rtl:right-auto ltr:left-auto ltr:right-0 dropdown-menu bg-clip-padding dark:bg-zinc-700 dark:border-zinc-500/50 dark:shadow-sm" aria-labelledby="dropdownMenuButtonS">
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Share <i class="float-right text-gray-500 dark:text-gray-300 ri-share-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Block <i class="float-right text-gray-500 dark:text-gray-300 ri-forbid-line"></i></a>
+                                        </li>
+                                        <li><a class="block w-full px-6 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/50 dark:text-gray-300 dark:hover:bg-zinc-500/50" href="#">Remove <i class="float-right text-gray-500 dark:text-gray-300 ri-delete-bin-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                
+                    </ul>
+                </div>
+                <!-- end contact list S -->
+            </div>
+           
+        </div>
+        <!-- end contact lists -->
+  
+
+</div>

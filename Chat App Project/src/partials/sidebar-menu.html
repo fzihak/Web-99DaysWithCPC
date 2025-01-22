@@ -1,0 +1,101 @@
+<div class="sidebar-menu w-full lg:w-[75px] shadow lg:flex lg:flex-col flex flex-row justify-between items-center fixed lg:relative z-40 bottom-0 bg-white dark:bg-zinc-600 ">
+    <div class="hidden lg:my-5 lg:block">
+        <a href="index.html" class="block dark:hidden">
+            <span>
+                <img src="assets/images/logo.svg" alt="" class="h-[30px]">
+            </span>
+        </a>
+
+        <a href="index.html" class="hidden dark:block">
+            <span>
+                <img src="assets/images/logo.svg" alt="" class="h-[30px]">
+            </span>
+        </a>
+    </div>
+    <!-- end navbar-brand-box -->
+
+
+    <!-- Start side-menu nav -->
+    <!-- Tabs -->
+    <div class="w-full mx-auto lg:my-auto">
+        <ul id="tabs" class="flex flex-row justify-center w-full lg:flex-col lg:flex nav-tabs">
+            <li class="flex-grow lg:flex-grow-0">
+                <a id="default-tab" href="#first" class="tab-button flex relative items-center justify-center mx-auto h-14 w-14 leading-[14px] group/tab my-2 rounded-lg">
+                    <div class="absolute items-center hidden -top-10 ltr:left-0 group-hover/tab:flex rtl:right-0">
+                        <div class="absolute -bottom-1 left-[40%] w-3 h-3 rotate-45 bg-black"></div>
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Profile</span>
+                    </div>
+                    <i class="text-2xl ri-user-2-line"></i>
+                </a>
+            </li>
+            <li class="flex-grow lg:flex-grow-0">
+                <a href="#second" class="tab-button active relative flex items-center justify-center mx-auto h-14 w-14 leading-[14px] group/tab my-2 rounded-lg">
+                    <div class="absolute items-center hidden -top-10 ltr:left-0 group-hover/tab:flex rtl:right-0">
+                        <div class="absolute -bottom-1 left-[40%] w-3 h-3 rotate-45 bg-black"></div>
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Chats</span>
+                    </div>
+                    <i class="text-2xl ri-message-3-line"></i>
+                </a>
+            </li>
+            <li class="flex-grow lg:flex-grow-0">
+                <a href="#third" class="tab-button relative flex items-center justify-center mx-auto h-14 w-14 leading-[14px] group/tab my-2 rounded-lg">
+                    <div class="absolute items-center hidden -top-10 ltr:left-0 group-hover/tab:flex rtl:right-0">
+                        <div class="absolute -bottom-1 left-[40%] w-3 h-3 rotate-45 bg-black"></div>
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Groups</span>
+                    </div>
+                    <i class="text-2xl ri-group-line"></i>
+                </a>
+            </li>
+            <li class="flex-grow lg:flex-grow-0">
+                <a href="#fourth" class="tab-button relative flex items-center justify-center mx-auto h-14 w-14 leading-[14px] group/tab my-2 rounded-lg">
+                    <div class="absolute items-center hidden -top-10 ltr:left-0 group-hover/tab:flex rtl:right-0">
+                        <div class="absolute -bottom-1 left-[40%] w-3 h-3 rotate-45 bg-black"></div>
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Contacts</span>
+                    </div>
+                    <i class="text-2xl ri-contacts-line"></i>
+                </a>
+            </li>
+            <li class="flex-grow lg:flex-grow-0">
+                <a href="#fifth" class="tab-button relative flex items-center justify-center mx-auto h-14 w-14 leading-[14px] group/tab my-2 rounded-lg">
+                    <div class="absolute items-center hidden -top-10 ltr:left-0 group-hover/tab:flex rtl:right-0">
+                        <div class="absolute -bottom-1 left-[40%] w-3 h-3 rotate-45 bg-black"></div>
+                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">Settings</span>
+                    </div>
+                    <i class="text-2xl ri-settings-2-line"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w-20 my-5 lg:w-auto">
+        <ul class="lg:block">
+            <li class="hidden text-center light-dark-mode nav-item lg:block">
+                <a href="#" class="hidden dark:block dark:text-violet-100/80">
+                    <i class="text-2xl ri-sun-line "></i>
+                </a>
+                <a href="#" class="block text-gray-500 dark:hidden">
+                    <i class="text-2xl ri-moon-clear-line"></i>
+                </a>
+            </li>
+
+            <li class="relative lg:mt-4 dropdown lg:dropup">
+                <a href="#" class="dropdown-toggle" id="dropdownButton2" data-bs-toggle="dropdown">
+                    <img src="assets/images/users/avatar-1.jpg" alt="" class="w-10 h-10 p-1 mx-auto rounded-full bg-gray-50 dark:bg-zinc-700">
+                </a>
+            
+                <ul class="absolute z-40 hidden float-left w-40 py-2 mx-4 mb-12 text-left list-none bg-white border-none rounded-lg shadow-lg dropdown-menu bg-clip-padding dark:bg-zinc-700" aria-labelledby="dropdownButton2">
+                    <li><a class="block w-full px-4 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/30 dark:text-gray-100 dark:hover:bg-zinc-600/50 ltr:text-left rtl:text-right" href="#">Profile <i class="text-gray-500 rtl:float-left ltr:float-right ri-profile-line text-16"></i></a>
+                    </li>
+                    <li><a class="block w-full px-4 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/30 dark:text-gray-100 dark:hover:bg-zinc-600/50 ltr:text-left rtl:text-right" href="#">Setting <i class="text-gray-500 rtl:float-left ltr:float-right ri-settings-3-line text-16"></i></a>
+                    </li>
+                    <li><a class="block w-full px-4 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/30 dark:text-gray-100 dark:hover:bg-zinc-600/50 ltr:text-left rtl:text-right" href="auth-lock-screen.html">Lock Screen <i class="text-gray-500 rtl:float-left ltr:float-right ri-git-repository-private-line text-16"></i></a>
+                    </li>
+                    <li class="my-2 border-b border-gray-100/20"></li>
+                    <li><a class="block w-full px-4 py-2 text-sm font-normal text-gray-700 bg-transparent dropdown-item whitespace-nowrap hover:bg-gray-100/30 dark:text-gray-100 dark:hover:bg-zinc-600/50 ltr:text-left rtl:text-right" href="auth-login.html">Log out <i class="text-gray-500 rtl:float-left ltr:float-right ri-logout-circle-r-line text-16"></i></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
