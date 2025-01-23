@@ -1,0 +1,21 @@
+/* switcher */
+
+[dir="ltr"] .switcher {
+    right: -250px;
+    z-index: 999;
+}
+
+[dir="ltr"] .switcher.show {
+    right: -0px !important;
+    z-index: 999;
+}
+
+[dir="rtl"] .switcher {
+    left: -250px;
+    z-index: 999;
+}
+
+[dir="rtl"] .switcher.show {
+    left: 0px;
+    z-index: 999;
+}

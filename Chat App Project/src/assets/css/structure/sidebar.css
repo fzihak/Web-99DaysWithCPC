@@ -1,0 +1,47 @@
+/* sidebar -------------- */
+
+.sidebar-menu {
+   min-width: var(--tw-sidebar-width);
+    @apply relative lg:h-screen;
+}
+
+
+.sidebar-menu .tab-button{
+    @apply text-gray-500 dark:text-violet-100/80;
+}
+
+/* active tabs */
+
+[data-theme-color="violet"] .sidebar-menu .tab-button.active {
+    @apply bg-violet-500/10 text-violet-500 dark:bg-white/5 dark:text-violet-500;
+}
+
+[data-theme-color="green"] .sidebar-menu .tab-button.active {
+    @apply text-green-500 bg-green-500/10 dark:bg-white/5 dark:text-green-500;
+}
+
+[data-theme-color="red"] .sidebar-menu .tab-button.active {
+    @apply text-red-500 bg-red-500/10 dark:bg-white/5 dark:text-red-500;
+}
+
+/* hover tabs */
+
+[data-theme-color="violet"] .sidebar-menu .tab-button:hover {
+    @apply bg-violet-500/10 text-violet-500 dark:bg-white/5 dark:text-violet-500;
+}
+
+[data-theme-color="green"] .sidebar-menu .tab-button:hover {
+    @apply text-green-500 bg-green-500/10 dark:bg-white/5 dark:text-green-500;
+}
+
+[data-theme-color="red"] .sidebar-menu .tab-button:hover {
+    @apply text-red-500 bg-red-500/10 dark:bg-white/5 dark:text-red-500;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active.tab-content {
+    display: block;
+}

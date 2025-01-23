@@ -1,0 +1,128 @@
+/* Template Name: Chatvia - Tailwindcss Admin Dashboard Template
+   Author: Themesbrand
+   Version: 1.0.0
+   File Description: Main Css file of the template
+*/
+
+/* // Tailwindcss */
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+/* Custom Css */
+@import "custom/general.css";
+@import "custom/components.css";
+@import "custom/chats.css";
+
+/* Plugins */
+@import "plugins/custom-scrollbar.css";
+
+@import "structure/sidebar.css";
+@import "structure/switcher.css";
+
+
+
+:root {
+   --tw-sidebar-width: 75px;
+   --tw-chat-leftbar-bg: 380px;
+}
+
+.chat-leftsidebar {
+   min-width: var(--tw-chat-leftbar-bg);
+}
+
+
+/* dropdown show */
+.dropdown-menu {
+   animation: DropDownSlide !important;
+   animation-duration: .3s !important;
+   animation-fill-mode: both !important;
+}
+
+@keyframes DropDownSlide {
+   100% {
+      transform: translateY(0);
+   }
+   0% {
+      transform: translateY(10px);
+   }
+}
+
+.animate-translate {
+   animation: animate-translate 0.5s both;
+}
+
+@keyframes animate-translate {
+   100% {
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+      opacity: 100%;
+   }
+   0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 0%;
+   }
+}
+
+/* on off switcher */
+.dot {
+   transform: translateX(0);
+}
+
+.checked-bg {
+   @apply bg-white border border-gray-100 dark:bg-zinc-700 dark:border-zinc-500;
+}
+
+[data-theme-color="violet"] input:checked~.checked-bg {
+   @apply border-transparent bg-violet-500;
+}
+
+[data-theme-color="green"] input:checked~.checked-bg {
+   @apply bg-green-500 border-transparent;
+}
+
+[data-theme-color="red"] input:checked~.checked-bg {
+   @apply bg-red-500 border-transparent;
+}
+
+.dot {
+   @apply bg-gray-200 border-transparent dark:bg-gray-50/50;
+}
+
+input:checked~.dot {
+   transform: translateX(100%);
+   @apply bg-white;
+}
+
+.user-profile-sidebar {
+   min-width: var(--tw-chat-leftbar-bg);
+   max-width: var(--tw-chat-leftbar-bg);
+   height: 100vh !important;
+   display: none;
+}
+
+@media(max-width:1300px) and (min-width:768px){
+   .user-profile-sidebar {
+      @apply fixed bg-white w-full h-full translate-x-[100%] z-50 right-[380px];
+   }
+}
+
+/*  auth page responsive */
+
+@media(max-width:1400px) {
+   .auth-bg {
+      margin: 0 !important;
+   }
+}
+
+@media (max-width: 952px) {
+   .user-chat {
+      @apply fixed top-0 left-0 invisible w-full h-full translate-x-[100%] z-50;
+   }
+   .user-chat-show {
+      visibility: visible;
+      transform: translateX(0);
+   }
+}
