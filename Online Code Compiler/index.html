@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Compiler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .compiler-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-section, .output-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        select, button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            resize: vertical;
+        }
+
+        .output {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Online Code Compiler</h1>
+        </div>
+        
+        <div class="compiler-container">
+            <div class="input-section">
+                <div class="controls">
+                    <select id="language-select">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="c">C</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                    <button id="run-btn">Run Code</button>
+                </div>
+                <textarea id="code-editor" placeholder="Write your code here..."></textarea>
+            </div>
+            
+            <div class="output-section">
+                <h3>Output</h3>
+                <div class="output" id="output-area">// Output will appear here...</div>
+                <div class="loading" id="loading">Compiling...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const codeEditor = document.getElementById('code-editor');
+            const languageSelect = document.getElementById('language-select');
+            const runBtn = document.getElementById('run-btn');
+            const outputArea = document.getElementById('output-area');
+            const loading = document.getElementById('loading');
+
+            // Sample starter code for different languages
+            const starterCode = {
+                python: '# Python example\nprint("Hello, World!")',
+                java: '// Java example\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}',
+                cpp: '// C++ example\n#include <iostream>\n\nint main() {\n    std::cout << "Hello, World!" << std::endl;\n    return 0;\n}',
+                c: '// C example\n#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}',
+                javascript: '// JavaScript example\nconsole.log("Hello, World!");'
+            };
+
+            // Set initial code
+            languageSelect.addEventListener('change', () => {
+                codeEditor.value = starterCode[languageSelect.value];
+            });
+            codeEditor.value = starterCode[languageSelect.value];
+
+            // Handle code execution
+            runBtn.addEventListener('click', async () => {
+                const code = codeEditor.value;
+                const language = languageSelect.value;
+
+                // Show loading state
+                loading.style.display = 'block';
+                outputArea.innerHTML = 'Compiling...';
+
+                try {
+                    // Here you would normally make an API call to your backend
+                    // For demonstration, we'll simulate a response
+                    await simulateCompilation(code, language);
+                } catch (error) {
+                    outputArea.innerHTML = `Error: ${error.message}`;
+                } finally {
+                    loading.style.display = 'none';
+                }
+            });
+
+            // Simulate code compilation (replace this with actual API calls)
+            async function simulateCompilation(code, language) {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        // This is where you'd normally process the response from your backend
+                        outputArea.innerHTML = `// Compilation successful!\n// Note: This is a demo output.\n// You'll need to implement actual compilation using a backend service.\n\nOutput:\nHello, World!`;
+                        resolve();
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
